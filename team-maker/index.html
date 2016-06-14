@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
   <head>
-      <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="../resources/angular.min.js"></script>
   </head>
   <body ng-app="myApp">
     <div class="header">
       <div class="container">
-        <h1>Book End</h1>
+        <h1>Team Maker Beta</h1>
       </div>
     </div>
 
@@ -20,13 +20,13 @@
         <h1>{{ title }}</h1>
         <h2>{{ promo }}</h2>
 
-        <div ng-repeat="product in products" class="col-md-6"> 
-          <div class="thumbnail"> 
-            <img src="img/the-book-of-trees.jpg"> 
-            <p class="title">{{ product.name }}</p> 
-            <p class="price">{{ product.price | currency }}</p> 
-            <p class="date">{{ product.pubdate | date }}</p> 
-          </div> 
+        <div>
+          <h3> Team 1 </h3>
+          <ul id="team1"></ul>
+        </div>
+        <div>
+          <h3>  Team 2  </h3>
+          <ul id="team2"></ul>
         </div>
 
       </div>
@@ -34,12 +34,12 @@
 
     <div class="footer">
       <div class="container">
-        <h2>Available for iPhone and Android.</h2>
-        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/app-store.png" width="120px" />
-        <img src="https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/google-play.png" width="110px" />
+
       </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
 
     <!-- Modules -->
     <script src="config/app.js"></script>
