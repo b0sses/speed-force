@@ -18,19 +18,23 @@
     </div>
 
     <div class="main" ng-controller="MainController">
-      <div class="container row">
-        <div class="col-md-6">
+      <div class="container row" style="float: none; margin: 0 auto;">
+        <div class="col-md-6 col-centered">
           <h2> Team 1 </h2>
           <ul id="team1"></ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-centered">
           <h2> Team 2 </h2>
           <ul id="team2"></ul>
         </div>
       </div>
-      <input type="button" ng-click="generar()" value="Generar" ng-show="showGenerar"/>
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row container" style="float: none; margin: 0 auto;">
+        <div class="col-md-2 col-centered" style="float: none; margin: 0 auto;">
+          <input type="button" ng-click="generar()" value="Generar" ng-show="showGenerar"/>
+        </div>
+      </div>
+      <div class="row container" style="float: none; margin: 0 auto;">
+        <div class="col-md-6 col-centered">
             <form novalidate name="form" class="simple-form">
               Nombre: <input type="text" ng-model="jugador.nombre" /><br />
               Habilidad: <input type="radio" ng-model="jugador.valor" value="2" />1
@@ -43,9 +47,9 @@
               <input type="submit" ng-click="update(jugador)" value="Guardar" />
             </form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-centered">
             <ul ng-repeat="persona in pila">
-              <li>{{persona.nombre}}</li>
+              <li>{{$index+1}}.- {{persona.nombre}} <button ng-click="removeItem($index)">Remove</button></li>
             </ul>
         </div>
       </div>

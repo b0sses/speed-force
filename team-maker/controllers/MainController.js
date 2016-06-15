@@ -9,14 +9,15 @@ app.controller('MainController', ['$scope', function($scope) {
   			&& $scope.jugador.valor!=''
   			&& $scope.jugador.nombre!=undefined
   			&& $scope.jugador.valor!=undefined
-  			&& $scope.pila.length<=12){
+  			&& $scope.pila.length<12){
   			$scope.pila.push(user);
        		$scope.clear();
   		}else{
-  			console.log('inserte valores o ya tiene muchos jugadores')
+  			console.log('faltan datos');
   		}
       if($scope.pila.length==12){
         $scope.showGenerar=true;
+        swal("OK!", "Ya hay 12 jugadores", "success");
       }
   };
   $scope.clear = function(){
@@ -26,7 +27,13 @@ app.controller('MainController', ['$scope', function($scope) {
     if($scope.pila.length==12){
       generar_teams($scope.pila);
     }else{
-      swal("Advertencia", "Faltan integrantes", "warning")
+      swal("Advertencia", "Faltan integrantes", "warning");
     }
+  }
+  $scope.removeItem = function(index){
+    $scope.pila.splice(index, 1);
+    if($scope.pila.length<12){
+        $scope.showGenerar=false;
+      }
   }
 }]);
