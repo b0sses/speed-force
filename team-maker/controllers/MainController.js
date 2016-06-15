@@ -25,7 +25,8 @@ app.controller('MainController', ['$scope', function($scope) {
   };
   $scope.generar = function(){
     if($scope.pila.length==12){
-    	$scope.pila_temp=$scope.pila;
+    	$scope.pila_temp=[];
+    	angular.copy($scope.pila, $scope.pila_temp);
       generar_teams($scope.pila_temp);
     }else{
       swal("Advertencia", "Faltan integrantes", "warning");
