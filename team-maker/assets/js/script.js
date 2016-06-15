@@ -35,7 +35,7 @@ function generar_teams(banca){
   var tot=0;
   var med=0;
   var aprox=false;
-  $.each(banca, function( index, value ) {
+  $.each(jugadores, function( index, value ) {
     tot=tot+parseInt(value.valor);
   });
   med=tot/2;
@@ -57,9 +57,9 @@ function makeTeam(tot_team,isAprox){
     if((c_team1+parseInt(value.valor))<=tot_team && team1.length<6){
     	c_team1=c_team1+parseInt(value.valor);
     	team1.push(value);
-      $('#team1').append('<li>'+value.nombre+'  - '+value.valor +'</li>');
+      $('#team1').append('<li class="list-group-item">'+value.nombre+'</li>');
     }else if(team2.length<6 && team1.length<=6){
-    	$('#team2').append('<li>'+value.nombre+'  - '+value.valor +'</li>');
+    	$('#team2').append('<li class="list-group-item">'+value.nombre+'</li>');
     }
   });
   if(isAprox){
