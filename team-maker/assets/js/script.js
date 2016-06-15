@@ -94,3 +94,11 @@ function shuffle(array) {
   }
   return array;
 }
+
+function valorVisiual(valor){
+  var retorno='';
+  for(var i=0;i<=(valor/2);i++){
+    retorno+='<i class="fa fa-futbol-o" aria-hidden="true"></i>';
+  }
+  return retorno;
+}

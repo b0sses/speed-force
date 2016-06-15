@@ -103,7 +103,7 @@
         </div>
         <div class="col-md-6 col-centered">
             <ul  class="list-group">
-              <li ng-repeat="persona in pila" class="list-group-item"><span class="label label-default">{{$index+1}}</span> {{persona.nombre}} <button class="btn btn-danger btn-xs pull-right" ng-click="removeItem($index)"><i class="fa fa-trash-o fa-lg"></i> Borrar</button></li>
+              <li ng-repeat="persona in pila" class="list-group-item"><span class="label label-default">{{$index+1}}</span> {{persona.nombre}}  <span ng-bind-html='persona.valor | valorball'></span><button class="btn btn-danger btn-xs pull-right" ng-click="removeItem($index)"><i class="fa fa-trash-o fa-lg"></i> Borrar</button></li>
             </ul>
         </div>
       </div>
