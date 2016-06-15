@@ -2,11 +2,13 @@
 <html>
   <head>
     <link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../resources/sweetalert/sweetalert.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="assets/css/main.css" rel="stylesheet" />
 
     <script src="../resources/angular.min.js"></script>
     <script src="../resources/jquery.min.js"></script>
+    <script src="../resources/sweetalert/sweetalert.min.js"></script>
   </head>
   <body ng-app="myApp">
     <div class="header">
@@ -26,9 +28,9 @@
           <ul id="team2"></ul>
         </div>
       </div>
-      <input type="button" ng-click="generar()" value="Generar" />
+      <input type="button" ng-click="generar()" value="Generar" ng-show="showGenerar"/>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <form novalidate name="form" class="simple-form">
               Nombre: <input type="text" ng-model="jugador.nombre" /><br />
               Habilidad: <input type="radio" ng-model="jugador.valor" value="2" />1
@@ -40,6 +42,11 @@
               <input type="button" ng-click="clear()" value="Reset" />
               <input type="submit" ng-click="update(jugador)" value="Guardar" />
             </form>
+        </div>
+        <div class="col-md-6">
+            <ul ng-repeat="persona in pila">
+              <li>{{persona.nombre}}</li>
+            </ul>
         </div>
       </div>
     </div>

@@ -14,7 +14,6 @@ var jugadores=[
     {nombre:'ju12',valor:2}
 ];
 $(document).ready(function() {
-	console.clear()
 	var tot=0;
   var med=0;
   var aprox=false;
@@ -29,6 +28,22 @@ $(document).ready(function() {
 	console.log(med);
   makeTeam(med,aprox);
 });
+function generar_teams(banca){
+  jugadores=banca;
+  var tot=0;
+  var med=0;
+  var aprox=false;
+  $.each(banca, function( index, value ) {
+    tot=tot+value.valor;
+  });
+  med=tot/2;
+  if(med%1!=0){
+    med=Math.round(med);
+    aprox=true;
+  }
+  console.log(med);
+  makeTeam(med,aprox);
+}
 
 function makeTeam(tot_team,isAprox){
 	$('#team1').html('');

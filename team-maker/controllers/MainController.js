@@ -1,6 +1,7 @@
 app.controller('MainController', ['$scope', function($scope) { 
   $scope.title = 'Top Sellers in Books lalal'; 
   $scope.promo ='hola';
+  $scope.showGenerar=false;
   $scope.pila = [];
   $scope.update = function(user) {
   		if($scope.jugador 
@@ -14,11 +15,18 @@ app.controller('MainController', ['$scope', function($scope) {
   		}else{
   			console.log('inserte valores o ya tiene muchos jugadores')
   		}
-      };
+      if($scope.pila.length==12){
+        $scope.showGenerar=true;
+      }
+  };
   $scope.clear = function(){
   	$scope.jugador=null;
   };
   $scope.generar = function(){
-  	
+    if($scope.pila.length==12){
+      generar_teams($scope.pila);
+    }else{
+      swal("Advertencia", "Faltan integrantes", "warning")
+    }
   }
 }]);
