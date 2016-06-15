@@ -28,6 +28,7 @@ $(document).ready(function() {
 	console.log(med);
   makeTeam(med,aprox);
 });
+
 function generar_teams(banca){
   jugadores=banca;
   var tot=0;
