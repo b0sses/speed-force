@@ -35,7 +35,7 @@
       </div>
       <div class="row container" style="float: none; margin: 0 auto;">
         <div class="col-md-6 col-centered">
-            <form novalidate name="form" class="simple-form">
+            <form novalidate name="form" class="simple-form" ng-show="!showGenerar">
               Nombre: <input type="text" ng-model="jugador.nombre" /><br />
               Habilidad: <input type="radio" ng-model="jugador.valor" value="2" />1
               <input type="radio" ng-model="jugador.valor" value="4" />2
