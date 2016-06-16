@@ -1,17 +1,17 @@
 var jugadores=[
 	//nombre del jugador - valoración de 2 a 8 (solo pares)
-    {nombre:'ju1',valor:2,resistencia:0,potencia:0},
-    {nombre:'ju2',valor:4,resistencia:0,potencia:0},
-    {nombre:'ju3',valor:6,resistencia:0,potencia:0},
-    {nombre:'ju4',valor:6,resistencia:0,potencia:0},
-    {nombre:'ju5',valor:4,resistencia:0,potencia:0},
-    {nombre:'ju6',valor:8,resistencia:0,potencia:0},
-    {nombre:'ju7',valor:2,resistencia:0,potencia:0},
-    {nombre:'ju8',valor:6,resistencia:0,potencia:0},
-    {nombre:'ju9',valor:4,resistencia:0,potencia:0},
-    {nombre:'ju10',valor:8,resistencia:0,potencia:0},
-    {nombre:'ju11',valor:8,resistencia:0,potencia:0},
-    {nombre:'ju12',valor:2,resistencia:0,potencia:0}
+    {nombre:'example 1',valor:2,resistencia:0,potencia:0},
+    {nombre:'example 2',valor:4,resistencia:0,potencia:0},
+    {nombre:'example 3',valor:6,resistencia:0,potencia:0},
+    {nombre:'example 4',valor:6,resistencia:0,potencia:0},
+    {nombre:'example 5',valor:4,resistencia:0,potencia:0},
+    {nombre:'example 6',valor:8,resistencia:0,potencia:0},
+    {nombre:'example 7',valor:2,resistencia:0,potencia:0},
+    {nombre:'example 8',valor:6,resistencia:0,potencia:0},
+    {nombre:'example 9',valor:4,resistencia:0,potencia:0},
+    {nombre:'example 10',valor:8,resistencia:0,potencia:0},
+    {nombre:'example 11',valor:8,resistencia:0,potencia:0},
+    {nombre:'example 12',valor:2,resistencia:0,potencia:0}
 ];
 var cant_repeticiones=0;
 $(document).ready(function() {
