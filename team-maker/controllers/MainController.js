@@ -7,8 +7,12 @@ app.controller('MainController', ['$scope', function($scope) {
   		if($scope.jugador 
   			&& $scope.jugador.nombre!='' 
   			&& $scope.jugador.valor!=''
+  			&& $scope.jugador.resistencia!=''
+  			&& $scope.jugador.potencia!=''
   			&& $scope.jugador.nombre!=undefined
   			&& $scope.jugador.valor!=undefined
+  			&& $scope.jugador.resistencia!=undefined
+  			&& $scope.jugador.potencia!=undefined
   			&& $scope.pila.length<12){
   			$scope.pila.push(user);
        		$scope.clear();

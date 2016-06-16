@@ -1,0 +1,3 @@
+div.ball,div.heart{width:270px;display:inline-block}input.ball,input.heart{display:none}label.ball,label.heart{float:right;padding:10px;font-size:15px;color:#abb88e;transition:all .2s}
+input.ball-5:checked ~ label.ball:before{color:#000;text-shadow:0 0 5px #FFF}input.ball-1:checked ~ label.ball:before{color:#F62}label.ball:hover,label.heart:hover{transform:rotate(-15deg) scale(1.3)}
+input.ball:checked ~ label.ball:before{content:'\f1e3';color:#e52325;transition:all .25s}label.ball:before{content:'\f1e3';font-family:FontAwesome}

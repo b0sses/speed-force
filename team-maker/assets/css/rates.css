@@ -1,0 +1,87 @@
+/***** BALL ***/
+div.ball {
+  width: 200px;
+  display: inline-block;
+}
+
+input.ball { display: none; }
+label.ball {
+  float: right;
+  padding: 10px;
+  font-size: 15px;
+  color: #abb88e;
+  transition: all .2s;
+}
+
+label.ball:hover { transform: rotate(-15deg) scale(1.3); }
+input.ball:checked ~ label.ball:before {
+  content: '\f1e3';
+  color:#e52325;
+  transition: all .25s;
+}
+label.ball:before {
+  content: '\f1e3';
+  font-family: FontAwesome;
+}
+input.ball-5:checked ~ label.ball:before {
+  color: #000;
+  text-shadow: 0 0 5px #FFF;
+}
+input.ball-1:checked ~ label.ball:before { color: #F62; }
+/***** HEART ***/
+div.heart {
+  width: 200px;
+  display: inline-block;
+}
+input.heart { display: none; }
+label.heart {
+  float: right;
+  padding: 10px;
+  font-size: 15px;
+  color: #abb88e;
+  transition: all .2s;
+}
+label.heart:hover { transform: rotate(-15deg) scale(1.3); }
+input.heart:checked ~ label.heart:before {
+  content: '\f21e';
+  color:#e52325;
+  transition: all .25s;
+}
+label.heart:before {
+  content: '\f08a';
+  font-family: FontAwesome;
+}
+input.heart-5:checked ~ label.heart:before {
+  color: #000;
+  text-shadow: 0 0 5px #FFF;
+}
+input.heart-1:checked ~ label.heart:before { color: #F62; }
+
+/***** power ***/
+div.power {
+  width: 200px;
+  display: inline-block;
+}
+input.power { display: none; }
+label.power {
+  float: right;
+  padding: 10px;
+  font-size: 15px;
+  color: #abb88e;
+  transition: all .2s;
+}
+label.power:hover { transform: rotate(-15deg) scale(1.3); }
+input.power:checked ~ label.power:before {
+  content: '\f0aa';
+  color:#e52325;
+  transition: all .25s;
+}
+label.power:before {
+  content: '\f01b';
+  font-family: FontAwesome;
+}
+input.power-5:checked ~ label.power:before {
+  color: #000;
+  text-shadow: 0 0 5px #FFF;
+}
+input.power-1:checked ~ label.power:before { color: #F62; }

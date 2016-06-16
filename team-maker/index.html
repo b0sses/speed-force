@@ -5,6 +5,7 @@
     <link href="../resources/sweetalert/sweetalert.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/rates.css" rel="stylesheet" />
 
     <script src="../resources/angular.min.js"></script>
     <script src="../resources/angular-route.min.js"></script>
@@ -13,40 +14,7 @@
     <link rel="stylesheet" href="../resources/font-awesome/css/font-awesome.min.css">
 
     <style type="text/css">
-      div.stars {
-        width: 270px;
-        display: inline-block;
-      }
-
-      input.star { display: none; }
-
-      label.star {
-        float: right;
-        padding: 10px;
-        font-size: 36px;
-        color: #abb88e;
-        transition: all .2s;
-      }
-
-      input.star:checked ~ label.star:before {
-        content: '\f1e3';
-        color:#e52325;
-        transition: all .25s;
-      }
-
-      input.star-5:checked ~ label.star:before {
-        color: #000;
-        text-shadow: 0 0 5px #FFF;
-      }
-
-      input.star-1:checked ~ label.star:before { color: #F62; }
-
-      label.star:hover { transform: rotate(-15deg) scale(1.3); }
-
-      label.star:before {
-        content: '\f1e3';
-        font-family: FontAwesome;
-      }
+      
     </style>
   </head>
   <body ng-app="myApp">
@@ -79,24 +47,65 @@
                 <div class="form-group col-xs-8">
                  <label> Nombre:</label> <input type="text" class="form-control" ng-model="jugador.nombre" />
                 </div>
+              </div>
+              <div class="row">
                 <div class="form-group col-xs-8">
                   <div class="pull-left">
                     <label>Habilidad: </label>
                   </div>
-                  <div class="pull-left">
-                    <input class="star star-5" id="star-5" type="radio" name="star" value="10" ng-model="jugador.valor"/>
-                    <label class="star star-5" for="star-5"></label>
-                    <input class="star star-4" id="star-4" type="radio" name="star" value="8" ng-model="jugador.valor"/>
-                    <label class="star star-4" for="star-4"></label>
-                    <input class="star star-3" id="star-3" type="radio" name="star" value="6" ng-model="jugador.valor"/>
-                    <label class="star star-3" for="star-3"></label>
-                    <input class="star star-2" id="star-2" type="radio" name="star" value="4" ng-model="jugador.valor"/>
-                    <label class="star star-2" for="star-2"></label>
-                    <input class="star star-1" id="star-1" type="radio" name="star" value="2" ng-model="jugador.valor"/>
-                    <label class="star star-1" for="star-1"></label>
+                  <div class="pull-left ball">
+                    <input class="ball ball-5" id="ball-5" type="radio" name="ball" value="10" ng-model="jugador.valor"/>
+                    <label class="ball ball-5" for="ball-5"></label>
+                    <input class="ball ball-4" id="ball-4" type="radio" name="ball" value="8" ng-model="jugador.valor"/>
+                    <label class="ball ball-4" for="ball-4"></label>
+                    <input class="ball ball-3" id="ball-3" type="radio" name="ball" value="6" ng-model="jugador.valor"/>
+                    <label class="ball ball-3" for="ball-3"></label>
+                    <input class="ball ball-2" id="ball-2" type="radio" name="ball" value="4" ng-model="jugador.valor"/>
+                    <label class="ball ball-2" for="ball-2"></label>
+                    <input class="ball ball-1" id="ball-1" type="radio" name="ball" value="2" ng-model="jugador.valor"/>
+                    <label class="ball ball-1" for="ball-1"></label>
                   </div>
                 </div>
-                <br />
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-8">
+                  <div class="pull-left">
+                    <label>Resistencia: </label>
+                  </div>
+                  <div class="pull-left heart">
+                    <input class="heart heart-5" id="heart-5" type="radio" name="heart" value="10" ng-model="jugador.resistencia"/>
+                    <label class="heart heart-5" for="heart-5"></label>
+                    <input class="heart heart-4" id="heart-4" type="radio" name="heart" value="8" ng-model="jugador.resistencia"/>
+                    <label class="heart heart-4" for="heart-4"></label>
+                    <input class="heart heart-3" id="heart-3" type="radio" name="heart" value="6" ng-model="jugador.resistencia"/>
+                    <label class="heart heart-3" for="heart-3"></label>
+                    <input class="heart heart-2" id="heart-2" type="radio" name="heart" value="4" ng-model="jugador.resistencia"/>
+                    <label class="heart heart-2" for="heart-2"></label>
+                    <input class="heart heart-1" id="heart-1" type="radio" name="heart" value="2" ng-model="jugador.resistencia"/>
+                    <label class="heart heart-1" for="heart-1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-8">
+                  <div class="pull-left">
+                    <label>Potencia: </label>
+                  </div>
+                  <div class="pull-left power">
+                    <input class="power power-5" id="power-5" type="radio" name="power" value="10" ng-model="jugador.potencia"/>
+                    <label class="power power-5" for="power-5"></label>
+                    <input class="power power-4" id="power-4" type="radio" name="power" value="8" ng-model="jugador.potencia"/>
+                    <label class="power power-4" for="power-4"></label>
+                    <input class="power power-3" id="power-3" type="radio" name="power" value="6" ng-model="jugador.potencia"/>
+                    <label class="power power-3" for="power-3"></label>
+                    <input class="power power-2" id="power-2" type="radio" name="power" value="4" ng-model="jugador.potencia"/>
+                    <label class="power power-2" for="power-2"></label>
+                    <input class="power power-1" id="power-1" type="radio" name="power" value="2" ng-model="jugador.potencia"/>
+                    <label class="power power-1" for="power-1"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
                 <input class="btn btn-secondary btn-sm" type="button" ng-click="clear()" value="Reset" />
                 <input class="btn btn-primary btn-sm" type="submit" ng-click="update(jugador)" value="Guardar" />
               </div>
@@ -104,7 +113,26 @@
         </div>
         <div class="col-md-6 col-centered">
             <ul  class="list-group">
-              <li ng-repeat="persona in pila" class="list-group-item"><span class="label label-default">{{$index+1}}</span> {{persona.nombre}}  <span ng-bind-html='persona.valor | valorball'></span><button class="btn btn-danger btn-xs pull-right" ng-click="removeItem($index)"><i class="fa fa-trash-o fa-lg"></i> Borrar</button></li>
+              <li ng-repeat="persona in pila" class="list-group-item">
+                <table style="width: 100%;">
+                  <tr>
+                    <td>
+                      <span class="label label-default">{{$index+1}}</span> 
+                      {{persona.nombre}}  
+                    </td>
+                    <td>
+                      <span ng-bind-html='persona.valor | valorball'></span><br/>
+                      <span ng-bind-html='persona.resistencia | resistenciaball'></span><br/>
+                      <span ng-bind-html='persona.potencia | potenciaball'></span><br/>
+                    </td>
+                    <td>
+                      <button class="btn btn-danger btn-xs pull-right" ng-click="removeItem($index)">
+                        <i class="fa fa-trash-o fa-lg"></i> Borrar
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </li>
             </ul>
         </div>
       </div>
