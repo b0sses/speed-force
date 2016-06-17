@@ -1,7 +1,7 @@
 var jugadores=[
 	//nombre del jugador - valoración de 2 a 8 (solo pares)
     {nombre:'example 1',valor:2,resistencia:2,potencia:2,arq:0},
-    {nombre:'example 2 arq',valor:4,resistencia:2,potencia:8,arq:0},
+    {nombre:'example 2 arq',valor:4,resistencia:2,potencia:8,arq:1},
     {nombre:'example 3',valor:6,resistencia:10,potencia:2,arq:0},
     {nombre:'example 4',valor:6,resistencia:10,potencia:8,arq:0},
     {nombre:'example 5',valor:4,resistencia:2,potencia:6,arq:0},
@@ -9,7 +9,7 @@ var jugadores=[
     {nombre:'example 7',valor:2,resistencia:6,potencia:2,arq:0},
     {nombre:'example 8',valor:6,resistencia:8,potencia:2,arq:0},
     {nombre:'example 9',valor:4,resistencia:8,potencia:8,arq:0},
-    {nombre:'example 10 arq',valor:8,resistencia:2,potencia:10,arq:0},
+    {nombre:'example 10 arq',valor:8,resistencia:2,potencia:10,arq:1},
     {nombre:'example 11',valor:8,resistencia:10,potencia:2,arq:0},
     {nombre:'example 12',valor:2,resistencia:6,potencia:4,arq:0}
 ];
@@ -23,6 +23,7 @@ $(document).ready(function() {
     var totJugador=parseInt(value.valor)+parseInt(value.potencia)+parseInt(value.resistencia);
     tot=tot+totJugador;
     if(parseInt(value.arq)==1){
+      value.nombre='<i class="fa fa-sign-language" aria-hidden="true"></i> ' + value.nombre;
       arquero++;
     }
   });
@@ -47,8 +48,8 @@ function generar_teams(banca){
   $.each(jugadores, function( index, value ) {
     var totJugador=parseInt(value.valor)+parseInt(value.potencia)+parseInt(value.resistencia);
     tot=tot+totJugador;
-    console.log('aaa ' +value.arq);
     if(parseInt(value.arq)==1){
+      value.nombre='<i class="fa fa-sign-language" aria-hidden="true"></i>' + value.nombre;
       arquero++;
     }
   });
@@ -75,20 +76,20 @@ function makeTeam(tot_team,isAprox,c_arq){
     var totJugador=parseInt(value.valor)+parseInt(value.potencia)+parseInt(value.resistencia);
     if((c_team1+totJugador)<=tot_team && team1.length<6){
     	c_team1=c_team1+totJugador;
-    	team1.push(value);
       if(parseInt(value.arq)==1){
         if(c_arq>=2){
           arq_team1=1;
         }
       }
+    	team1.push(value);
       $('#team1').append('<li class="list-group-item">'+value.nombre+'</li>');
     }else if(team2.length<6 && team1.length<=6){
-      team2.push(value);
       if(parseInt(value.arq)==1){
         if(c_arq>=2){
           arq_team2=1;
         }
       }
+      team2.push(value);
     	$('#team2').append('<li class="list-group-item">'+value.nombre+'</li>');
     }
   });

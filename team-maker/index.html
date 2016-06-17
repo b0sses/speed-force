@@ -45,7 +45,7 @@
             <form novalidate name="form" class="simple-form form-inline" ng-show="!showGenerar">
               <div class="row">
                 <div class="form-group col-xs-8">
-                 <label> Nombre:</label> <input type="text" class="form-control" ng-model="jugador.nombre" />
+                 <label> Nombre:</label> <input type="text" maxlength="20" class="form-control" ng-model="jugador.nombre" />
                 </div>
               </div>
               <div class="row">
@@ -107,7 +107,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-8 checkbox">
-                 <label> Juega al arco?: <input type="checkbox" ng-model="jugador.arq"  ng-true-value="1" ng-false-value="0" ng-checked="false" ng-init="jugador.arq=0"/></label> 
+                 <label> Juega al arco?: <input type="checkbox" ng-model="jugador.arq"  ng-true-value="1" ng-false-value="0" ng-init="jugador.arq=0"/></label> 
                 </div>
               </div>
               <div class="row">
@@ -123,7 +123,7 @@
                   <tr>
                     <td>
                       <span class="label label-default">{{$index+1}}</span> 
-                      {{persona.nombre}}  {{persona.arq}}
+                      {{persona.nombre}}  <span ng-bind-html='persona.arq | arquero'></span>
                     </td>
                     <td>
                       <span ng-bind-html='persona.valor | valorball'></span><br/>

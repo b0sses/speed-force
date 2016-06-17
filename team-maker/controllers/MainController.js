@@ -25,7 +25,8 @@ app.controller('MainController', ['$scope', function($scope) {
       }
   };
   $scope.clear = function(){
-  	$scope.jugador=null;
+  	$scope.jugador={};
+  	$scope.jugador.arq=0;
   };
   $scope.generar = function(){
     if($scope.pila.length==12){
