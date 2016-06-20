@@ -94,22 +94,22 @@ function makeTeam(tot_team,isAprox,c_arq){
     }
   });
   if(isAprox){
-  	if(c_team1!=tot_team || c_team1!=(tot_team-1) || team1.length<6 || cant_repeticiones<=5){
+  	if(c_team1!=tot_team || c_team1!=(tot_team-1) || team1.length<6 || cant_repeticiones<=9){
     	cant_repeticiones++;
       makeTeam(tot_team,isAprox,c_arq);
     }else{
-      if (cant_repeticiones==6){
+      if (cant_repeticiones==10){
         console.log('muchas repeticiones');
       }
       console.log('cant '+cant_repeticiones);
       cant_repeticiones=0;
     }
   }else{
-    if((c_team1!=tot_team || team1.length<6) && cant_repeticiones<=5){
+    if((c_team1!=tot_team || team1.length<6) && cant_repeticiones<=9){
       cant_repeticiones++;
       makeTeam(tot_team,isAprox,c_arq);
     }else{
-      if (cant_repeticiones==6){
+      if (cant_repeticiones==10){
         console.log('muchas repeticiones');
       }
       console.log('cant '+cant_repeticiones);

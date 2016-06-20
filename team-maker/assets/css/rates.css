@@ -1,14 +1,17 @@
-/***** BALL ***/
-div.ball {
-  width: 200px;
+div.ball ,
+div.power,
+div.heart {
+  width: 216px;
   display: inline-block;
+  float:left;
 }
 
+/***** BALL ***/
 input.ball { display: none; }
 label.ball {
   float: right;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #abb88e;
   transition: all .2s;
 }
@@ -29,15 +32,11 @@ input.ball-5:checked ~ label.ball:before {
 }
 input.ball-1:checked ~ label.ball:before { color: #F62; }
 /***** HEART ***/
-div.heart {
-  width: 200px;
-  display: inline-block;
-}
 input.heart { display: none; }
 label.heart {
   float: right;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #abb88e;
   transition: all .2s;
 }
@@ -58,15 +57,11 @@ input.heart-5:checked ~ label.heart:before {
 input.heart-1:checked ~ label.heart:before { color: #F62; }
 
 /***** power ***/
-div.power {
-  width: 200px;
-  display: inline-block;
-}
 input.power { display: none; }
 label.power {
   float: right;
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   color: #abb88e;
   transition: all .2s;
 }
