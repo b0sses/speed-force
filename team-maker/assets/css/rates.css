@@ -3,7 +3,7 @@ div.power,
 div.heart {
   width: 216px;
   display: inline-block;
-  float:left;
+  vertical-align: middle;
 }
 
 /***** BALL ***/
