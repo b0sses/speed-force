@@ -39,6 +39,19 @@ html, body {
  padding: 20px 0;
 }
 
+.tbl-header-team{
+   background-color: #DDDDDD ;
+   width: 100%;
+}
+.tbl-header-team td{
+   vertical-align: middle;
+}
+.tbl-header-team h3 {
+ color: #999999 ;
+ font-size: 20px;
+ 
+ padding: 20px 0 20px 20px;
+}
 .thumbnail {
  border: 0px;
  position: relative;

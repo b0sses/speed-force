@@ -27,11 +27,30 @@
     <div class="main" ng-controller="MainController">
       <div class="container row" style="float: none; margin: 0 auto;">
         <div class="col-md-6 col-centered">
-          <h2> Team 1 </h2>
+          <table class="tbl-header-team">
+            <tr>
+              <td><h3> Team 1 </h2></td>
+              <td class="promedios-a">
+                      H: <span id="ht1"></span><br/>
+                      R: <span id="rt1"></span><br/>
+                      P: <span id="pt1"></span><br/>
+              </td>
+            </tr>
+          </table>
+          
           <ul id="team1" class="list-group"></ul>
         </div>
         <div class="col-md-6 col-centered">
-          <h2> Team 2 </h2>
+          <table class="tbl-header-team">
+            <tr>
+              <td><h3> Team 2 </h2></td>
+              <td class="promedios-a">
+                      H: <span id="ht2"></span><br/>
+                      R: <span id="rt2"></span><br/>
+                      P: <span id="pt2"></span><br/>
+              </td>
+            </tr>
+          </table>
           <ul id="team2" class="list-group"></ul>
         </div>
       </div>
