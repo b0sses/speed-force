@@ -40,7 +40,7 @@
           <input type="button" class="btn btn-primary btn-lg" ng-click="generar()" value="Generar" ng-show="showGenerar"/>
         </div>
       </div>
-      <div class="row container" style="float: none; margin: 0 auto;">
+      <div class="row container" style="float: none; margin: 20px auto;">
         <div class="col-md-6 col-centered">
             <form novalidate name="form" class="simple-form form-inline" ng-show="!showGenerar">
               <div class="row">
@@ -104,27 +104,31 @@
                  <label> Juega al arco?: <input type="checkbox" ng-model="jugador.arq"  ng-true-value="1" ng-false-value="0" ng-init="jugador.arq=0"/></label> 
                 </div>
               </div>
-              <div class="row">
+              <div class="row top-buffer">
                 <input class="btn btn-secondary btn-sm" type="button" ng-click="clear()" value="Limpiar" />
                 <input class="btn btn-primary btn-sm" type="submit" ng-click="update(jugador)" value="Guardar" />
               </div>
             </form>
         </div>
-        <div class="col-md-6 col-centered">
+
+        <div class="col-md-6 col-centered top-buffer">
+            <h2> Lista de Jugadores </h2>
             <ul  class="list-group">
               <li ng-repeat="persona in pila" class="list-group-item">
                 <table style="width: 100%;">
                   <tr>
-                    <td>
+                    <td width="10%">
                       <span class="label label-default">{{$index+1}}</span> 
+                    </td>
+                    <td width="40%">
                       {{persona.nombre}}  <span ng-bind-html='persona.arq | arquero'></span>
                     </td>
-                    <td>
-                      <span ng-bind-html='persona.valor | valorball'></span><br/>
-                      <span ng-bind-html='persona.resistencia | resistenciaball'></span><br/>
-                      <span ng-bind-html='persona.potencia | potenciaball'></span><br/>
+                    <td width="30%">
+                      H: <span ng-bind-html='persona.valor | valorball'></span><br/>
+                      R: <span ng-bind-html='persona.resistencia | resistenciaball'></span><br/>
+                      P: <span ng-bind-html='persona.potencia | potenciaball'></span><br/>
                     </td>
-                    <td>
+                    <td width="20%">
                       <button class="btn btn-danger btn-xs pull-right" ng-click="removeItem($index)">
                         <i class="fa fa-trash-o fa-lg"></i> Borrar
                       </button>

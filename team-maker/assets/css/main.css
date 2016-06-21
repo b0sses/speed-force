@@ -129,3 +129,4 @@ html, body {
 .footer img {
    margin: 0 10px;
 }
+.top-buffer { margin-top:20px; }
