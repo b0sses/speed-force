@@ -62,7 +62,6 @@ function generar_teams(banca){
   if(med%2!=0){
     med=med+1;
   }
-  console.log(med,aprox,arquero);
   makeTeam(med,aprox,arquero);
 }
 
@@ -128,14 +127,10 @@ function makeTeam(tot_team,isAprox,c_arq){
         $('#pt2').html(icoRates(t2.pot,3));
       }else{
         console.log('cant '+cant_repeticiones);
-        console.log('cant ');
         if(c_arq>=2){
             if(arq_team1!=1 || arq_team2!=1){
-              console.log('no arquero');
-              console.log(tot_team,isAprox,c_arq);
               makeTeam(tot_team,isAprox,c_arq);
             }else{
-              console.log('si arquero');
               var t1=promedioRates(team1);
               var t2=promedioRates(team2);
               $('#ht1').html(icoRates(t1.hab,1));
@@ -172,9 +167,9 @@ function promedioRates(objeto){
   var prom2=0;
   var prom3=0;
   $.each(objeto,function(i,e){
-    prom1+=e.valor;
-    prom2+=e.resistencia;
-    prom3+=e.potencia;
+    prom1+=parseInt(e.valor);
+    prom2+=parseInt(e.resistencia);
+    prom3+=parseInt(e.potencia);
   });
   prom1=Math.round(prom1/objeto.length);
   prom2=Math.round(prom2/objeto.length);
@@ -199,9 +194,9 @@ function icoRates(valor,type) {
             break;
     }
     var retorno='';
-    /*for(var i=0;i<(valor/2);i++){
+    for(var i=0;i<(valor/2);i++){
        retorno+='<i class="fa '+type+'" aria-hidden="true"></i>';
-    }*/
+    }
     return retorno;
 
 }
